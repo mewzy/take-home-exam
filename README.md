@@ -80,7 +80,9 @@ You will be tested on your understanding of:
 
 9 (Bonus) - You now want to replace `Building ID` on the listings table (listings_list.js.jsx) with `Building Name`. Make changes to `./app/assets/javascripts/components/listings/listings_list.js.jsx` and `listings_controller` to display the buildings names on mount as well as when applying filters.
 
-10 - Push your completed work to this repository under a new branch. The title of the branch should be `YOUR_FIRST_NAME-YOUR_LAST_NAME`. If you'd like to explain your work in more detail, you can add it to the bottom of README.md in the space given below.
+10 - Push your completed work to this repository under a new branch. The title of the branch should be `YOUR_FIRST_NAME-YOUR_LAST_NAME`. If you'd like to explain your work in more detail, you can add it to the bottom of `README.md` in the space given below.
+
+## BEST OF LUCK!
 
 ***
 
