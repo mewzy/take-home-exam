@@ -21,13 +21,13 @@ class ListingsPage extends React.Component {
           <h3>Listings</h3>
         </div>
         <div className='page_body'>
-          <ListingsList
-            listings={listings}
-          />
           <ListingsFilters
             filters={filters}
             applyFilter={this.applyFilter.bind(this)}
             updateFilter={this.updateFilter.bind(this)}
+          />
+          <ListingsList
+            listings={listings}
           />
         </div>
       </div>
