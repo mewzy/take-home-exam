@@ -1,0 +1,70 @@
+.ListingsPage_container {
+  .ListingFilters_container,
+  .ListingList_container {
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .ListingFilters_container {
+    width: 30%;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 1px 2px 0 rgba(black, 0.2);
+
+    .ListingFilters_filter {
+      margin-bottom: 20px;
+
+      input[type='number'] {
+        padding: 10px;
+        width: 70px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid #dddddd;
+        margin: 0 5px;
+
+        &:focus {
+          border-color: #00A1A4;
+        }
+      }
+    }
+
+    .ListingFilters_button-submit {
+      font-size: 15px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      box-shadow: 0 1px 5px 0 rgba(black, 0.2);
+      background-color: #00A1A4;
+      color: white;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .ListingList_container {
+    width: 70%;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      td {
+        padding: 10px 5px;
+      }
+
+      thead {
+        font-weight: bold;
+      }
+
+      tbody {
+        tr {
+          &:nth-child(odd) {
+            background: #d2e5e6;
+          }
+
+
+        }
+      }
+    }
+  }
+}

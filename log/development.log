@@ -1,0 +1,81 @@
+DEPRECATION WARNING: to_prepare is deprecated and will be removed from Rails 5.1 (use ActiveSupport::Reloader.to_prepare instead) (called from <top (required)> at /Users/oatmeeel/Documents/take_home_mewzy_new/config/environment.rb:5)
+DEPRECATION WARNING: to_prepare is deprecated and will be removed from Rails 5.1 (use ActiveSupport::Reloader.to_prepare instead) (called from <top (required)> at /Users/oatmeeel/Documents/take_home_mewzy_new/config/environment.rb:5)
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateListings (20171201193444)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "listings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171201193444"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBuildings (20171201195830)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "buildings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171201195830"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateNeighbourhoods (20171201195836)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "neighbourhoods" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171201195836"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnsToTables (20171201220329)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "listings" ADD "name" varchar[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "listings" ADD "address" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "listings" ADD "lat" float[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "listings" ADD "lng" float[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "listings" ADD "bedrooms" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "listings" ADD "bathrooms" integer[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "listings" ADD "price" integer[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "listings" ADD "parking" boolean[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "buildings" ADD "name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "buildings" ADD "address" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "buildings" ADD "lat" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "buildings" ADD "lng" float[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "buildings" ADD "selling_status" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "neighbourhoods" ADD "name" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171201220329"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddReferencesToTables (20171201221440)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "listings" ADD "building_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_listings_on_building_id" ON "listings" ("building_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "buildings" ADD "neighbourhood_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_buildings_on_neighbourhood_id" ON "buildings" ("neighbourhood_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171201221440"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemoveTables (20171204174756)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "listings"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "neighbourhoods"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "buildings"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204174756"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-04 17:48:17.998537"], ["updated_at", "2017-12-04 17:48:17.998537"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: to_prepare is deprecated and will be removed from Rails 5.1 (use ActiveSupport::Reloader.to_prepare instead) (called from <top (required)> at /Users/oatmeeel/Documents/take_home_mewzy_new/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveTables (20171204175254)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "listings"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: to_prepare is deprecated and will be removed from Rails 5.1 (use ActiveSupport::Reloader.to_prepare instead) (called from <top (required)> at /Users/oatmeeel/Documents/take_home_mewzy_new/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2017-12-04 09:53:49 -0800
+Processing by ListingsController#all as HTML
+  Rendering listings/all.html.erb within layouts/application
+  Rendered listings/all.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 3731ms (Views: 3718.3ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: to_prepare is deprecated and will be removed from Rails 5.1 (use ActiveSupport::Reloader.to_prepare instead) (called from <top (required)> at /Users/oatmeeel/Documents/take_home_mewzy_new/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: to_prepare is deprecated and will be removed from Rails 5.1 (use ActiveSupport::Reloader.to_prepare instead) (called from <top (required)> at /Users/oatmeeel/Documents/take_home_mewzy_new/config/environment.rb:5)
+DEPRECATION WARNING: to_prepare is deprecated and will be removed from Rails 5.1 (use ActiveSupport::Reloader.to_prepare instead) (called from <top (required)> at /Users/oatmeeel/Documents/take_home_mewzy_new/config/environment.rb:5)
+DEPRECATION WARNING: to_prepare is deprecated and will be removed from Rails 5.1 (use ActiveSupport::Reloader.to_prepare instead) (called from <top (required)> at /Users/oatmeeel/Documents/take_home_mewzy_new/config/environment.rb:5)
