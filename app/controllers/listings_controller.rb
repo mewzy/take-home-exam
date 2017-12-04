@@ -1,10 +1,12 @@
 class ListingsController < ApplicationController
   def all
-    if defined? Listing
+
+    begin
       @listings = Listing.all
-    else
+    rescue => e
       @listings = []
     end
+
   end
 
   def filter
