@@ -54,8 +54,7 @@ class ListingsPage extends React.Component {
         })
       },
       error: (err) => {
-        alert(err.message);
-        // Add code here
+        alert(err.error_message);
       }
     })
   }
