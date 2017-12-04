@@ -67,14 +67,14 @@ You will be tested on your understanding of:
 
 5 - Go to localhost:3000 to see listings. You should see 12 listings.
 
-6 - Explore `./app/assets/javascripts/components/listings/listings_page.js.jsx` and the `applyFilter` function, that sends the filter parameters to the `listings_controller` via a post request to `/apply_filter`. See that when you click `Apply Filter`, the controller method `def filter` is hit.
+6 - Explore `./app/assets/javascripts/components/listings/listings_page.js.jsx` and the `applyFilter` function, that sends the filter parameters to the `listings_controller` via a `POST` request to `/apply_filter`. See that when you click `Apply Filter`, the controller method called `filter` is hit.
 
-7 - Write an efficient ActiveRecord query to return listings that pass the filters. Your code must be able to cover multiple filters at the same time. Return an empty array if the results are empty. Your code should pass the following test:
+7 - Write an efficient ActiveRecord query to return listings that pass the filters. Your code must be able to cover multiple filters at the same time, in any order. Return an empty array if the results are empty. Your code should pass the following test (and work as expected with other filters).
 
 * filters['bedrooms'] = [2] (2+ beds) returns 9 listings
 * filters['bedrooms'] = [1,3] && filters['parking'] = true (1-3 beds and with parking) returns 6 listings
 * filters['bedrooms'] = [2] && filter['bathrooms'] = [2] (2+ beds and 2+ baths) returns 9 listings
-* filters['price'] = [700000, 200000] && filters['bedrooms'] = [3] (price between 200000 and 700000 and with 3+ beds) returns 3 listings
+* filters['price'] = [700000, 200000] && filters['bedrooms'] = [3] (price between 200,000 and 700,000 and with 3+ beds) returns 3 listings
 
 8 - Include a simple error handling to deal with query or other errors. Include an appropriate status code. Pass parameter `error_message` as message explaining the error.
 
@@ -84,4 +84,4 @@ You will be tested on your understanding of:
 
 ***
 
-## Additional Notes & Comments
+## Additional Work Notes & Comments
