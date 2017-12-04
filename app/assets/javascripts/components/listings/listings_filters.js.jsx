@@ -13,17 +13,19 @@ class ListingsFilters extends React.Component {
           <span>Bedrooms between </span>
           <input
             type='number'
+            placeholder='default 0'
             value={bedrooms[0]}
             onChange={ e => {
-              updateFilter('bedrooms',[e.target.value, bedrooms[1]])
+              updateFilter('bedrooms',[Number(e.target.value), bedrooms[1] || 10])
             }}
           />
           <span>and</span>
           <input
             type='number'
+            placeholder='default 10'
             value={bedrooms[1]}
             onChange={ e => {
-              updateFilter('bedrooms',[bedrooms[0], e.target.value])
+              updateFilter('bedrooms',[bedrooms[0] || 0, Number(e.target.value)])
             }}
           />
         </div>
@@ -31,17 +33,19 @@ class ListingsFilters extends React.Component {
           <span>Bathrooms between </span>
           <input
             value={bathrooms[0]}
+            placeholder='default 0'
             type='number'
             onChange={ e => {
-              updateFilter('bathrooms',[e.target.value, bathrooms[1]])
+              updateFilter('bathrooms',[Number(e.target.value), bathrooms[1] || 10])
             }}
           />
           <span>and</span>
           <input
             value={bathrooms[1]}
+            placeholder='default 10'
             type='number'
             onChange={ e => {
-              updateFilter('bathrooms',[bathrooms[0], e.target.value])
+              updateFilter('bathrooms',[bathrooms[0] || 0, Number(e.target.value)])
             }}
           />
         </div>
@@ -49,17 +53,19 @@ class ListingsFilters extends React.Component {
           <span>Price between </span>
           <input
             value={price[0]}
+            placeholder='default 0'
             type='number'
             onChange={ e => {
-              updateFilter('price',[e.target.value, price[1]])
+              updateFilter('price',[Number(e.target.value), price[1] || 10000000])
             }}
           />
           <span>and</span>
           <input
             value={price[1]}
+            placeholder='default 10000000'
             type='number'
             onChange={ e => {
-              updateFilter('price',[price[0], e.target.value])
+              updateFilter('price',[price[0] || 0, Number(e.target.value)])
             }}
           />
         </div>
