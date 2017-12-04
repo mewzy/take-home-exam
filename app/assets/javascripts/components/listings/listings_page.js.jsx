@@ -7,7 +7,7 @@ class ListingsPage extends React.Component {
         bedrooms: [],
         bathrooms: [],
         price: [],
-        with_parking: false
+        parking: false
       }
     }
   }

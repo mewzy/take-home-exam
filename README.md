@@ -66,10 +66,10 @@ You will be tested on your understanding of:
 
 7 - Write an efficient ActiveRecord query to return listings that pass the filters. Your code must be able to cover multiple filters at the same time. Return an empty array if the results are empty. Your code should pass the following test:
 
-* filters['beds'] = [2] (2+ beds) returns 9 listings
-* filters['beds'] = [1,3] && filters['beds'] = [1,3] (1-3 beds and with parking) returns 6 listings
-* filters['beds'] = [2] && filter['baths'] = [2] (2+ beds and 2+ baths) returns 9 listings
-* filters['price'] = [200000,700000] && filters['beds'] = [3] (price between 200000 and 700000 and with 3+ beds) returns 3 listings
+* filters['bedrooms'] = [2] (2+ beds) returns 9 listings
+* filters['bedrooms'] = [1,3] && filters['parking'] = [1,3] (1-3 beds and with parking) returns 6 listings
+* filters['bedrooms'] = [2] && filter['bathrooms'] = [2] (2+ beds and 2+ baths) returns 9 listings
+* filters['price'] = [200000,700000] && filters['bedrooms'] = [3] (price between 200000 and 700000 and with 3+ beds) returns 3 listings
 
 8 - Include a simple error handling to deal with query or other errors. Include an appropriate status code. Pass parameter `error_message` as message explaining the error.
 
