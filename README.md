@@ -3,19 +3,18 @@
 ## Requirements
 
 - ruby version 2.3.0 +
-- rails version 5.0.0 +
+- rails version 4.0.0 +
 
 ## Installation
 
 - git clone repository
-- `$ bundle i`
-- `rake db:migrate`
-- `$ rails s`
 - Create your own branch. The title of the branch should be `YOUR_FIRST_NAME-YOUR_LAST_NAME`.
+- `$ bundle i`
+- `$ rails s && rake db:migrate`
 
 ## Overview
 
-In this assignment, you will be populating the sqlite database from the data provided in .json format, and completing a filtering feature of a sample listings page.
+In this assignment, you will be populating the `sqlite` database from the data provided in `.json` format, and completing a filter feature of a sample listings page.
 
 You will be tested on your understanding of:
 
@@ -33,6 +32,7 @@ You will be tested on your understanding of:
 
   - `Listing` has following attributes -
 
+  ```
     :name => :string,
     :address => :string,
     :lat => :float,
@@ -41,18 +41,23 @@ You will be tested on your understanding of:
     :bathrooms => :integer,
     :price => :integer,
     :parking => :boolean,
+  ```
 
   - `Building` has following attributes -
 
+  ```
     :name => :string,
     :address => :string,
     :lat => :float,
     :lng => :float,
     :selling_status => :string,
+  ```
 
   - `Neighbourhood` has following attributes -
 
+  ```
     :name => :string
+  ```
 
 2 - Neighbourhood has many buildings, and listings through buildings. Buildings has many listings. Add the necessary Model relations and generate references with foreign keys with rails migration.
 
