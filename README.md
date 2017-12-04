@@ -11,6 +11,7 @@
 - `$ bundle i`
 - `rake db:migrate`
 - `$ rails s`
+- Create your own branch. The title of the branch should be `YOUR_FIRST_NAME-YOUR_LAST_NAME`.
 
 ## Overview
 
