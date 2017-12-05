@@ -10,7 +10,7 @@
 - git clone repository
 - Create your own branch. The title of the branch should be `YOUR_FIRST_NAME-YOUR_LAST_NAME`.
 - `$ bundle i`
-- `$ rails s && rake db:migrate`
+- `$ rake db:migrate && rails s`
 
 ## Overview
 
