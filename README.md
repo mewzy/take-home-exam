@@ -28,6 +28,8 @@ You will be tested on your understanding of:
 
 ## Assignment
 
+0 - Go to `localhost:3000`. You should see a simple dashboard with filters and an empty table.
+
 1 - Create 3 classes - `Listing`, `Building` & `Neighbourhood`.
 
   - `Listing` has following attributes -
