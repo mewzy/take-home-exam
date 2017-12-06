@@ -1,5 +1,9 @@
 # MEWZY TAKE HOME EXAM
 
+```
+NOTE: Please explain your work and commit regularly. This will allow us to see your work and thought process.
+```
+
 ## Requirements
 
 - ruby version 2.3.0 +
