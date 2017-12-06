@@ -46,7 +46,9 @@ class ListingsPage extends React.Component {
     $.ajax({
       url: '/apply_filter',
       method: 'POST',
-      data: {filters},
+      dataType: 'json',
+      contentType: 'application/json',
+      data: JSON.stringify({filters}),
       success: (response) => {
         // updating state
         this.setState({
@@ -54,7 +56,9 @@ class ListingsPage extends React.Component {
         })
       },
       error: (err) => {
-        alert(err.error_message);
+        debugger;
+        alert(err.message || 'Internal Server Error');
+        // Add code here
       }
     })
   }
