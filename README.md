@@ -80,7 +80,7 @@ You will be tested on your understanding of:
 * filters['bedrooms'] = [2] (2+ beds) returns 9 listings
 * filters['bedrooms'] = [1,3] && filters['parking'] = true (1-3 beds and with parking) returns 6 listings
 * filters['bedrooms'] = [2] && filter['bathrooms'] = [2] (2+ beds and 2+ baths) returns 9 listings
-* filters['price'] = [700000, 200000] && filters['bedrooms'] = [3] (price between 200,000 and 700,000 and with 3+ beds) returns 3 listings
+* filters['price'] = [200000, 700000] && filters['bedrooms'] = [3] (price between 200,000 and 700,000 and with 3+ beds) returns 3 listings
 
 8 - Include a simple error handling to deal with query or other errors. Include an appropriate status code. Pass parameter `error_message` as message explaining the error.
 
