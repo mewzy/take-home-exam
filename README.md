@@ -84,6 +84,10 @@ You will be tested on your understanding of:
 
 10 - Push your completed work to this repository under a new branch. The title of the branch should be `YOUR_FIRST_NAME-YOUR_LAST_NAME`. If you'd like to explain your work in more detail, you can add it to the bottom of `README.md` in the space given below.
 
+## Submission
+
+To avoid candidates looking at each other's branches, please push the project into a new repository under your account.
+
 ## BEST OF LUCK!
 
 ***
