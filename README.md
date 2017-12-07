@@ -80,7 +80,7 @@ You will be tested on your understanding of:
 * filters['bedrooms'] = [2] (2+ beds) returns 9 listings
 * filters['bedrooms'] = [1,3] && filters['parking'] = true (1-3 beds and with parking) returns 6 listings
 * filters['bedrooms'] = [2] && filter['bathrooms'] = [2] (2+ beds and 2+ baths) returns 9 listings
-* filters['price'] = [700000, 200000] && filters['bedrooms'] = [3] (price between 200,000 and 700,000 and with 3+ beds) returns 3 listings `the value of [700000, 200000] and [200000, 700000] should both return the same results.`
+* filters['price'] = [700000, 200000] && filters['bedrooms'] = [3] (price between 200,000 and 700,000 and with 3+ beds) returns 3 listings `the value of [700000, 200000] and [200000, 700000] should both return the same results. This applies for other filters too.`
 
 
 
@@ -90,9 +90,6 @@ You will be tested on your understanding of:
 
 10 - Push your completed work to this repository under a new branch. The title of the branch should be `YOUR_FIRST_NAME-YOUR_LAST_NAME`. If you'd like to explain your work in more detail, you can add it to the bottom of `README.md` in the space given below.
 
-## Submission
-
-To avoid candidates looking at each other's branches, please push the project into a new repository under your account.
 
 ## BEST OF LUCK!
 

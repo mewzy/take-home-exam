@@ -37,6 +37,7 @@ class ListingsPage extends React.Component {
   updateFilter(filter, value) {
     let { filters } = this.state;
     filters[filter] = value;
+    console.log(filters[filter]);
     this.setState({filters});
   }
 

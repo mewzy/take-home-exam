@@ -12,6 +12,8 @@ class ListingsController < ApplicationController
   def filter
     # Add Code here
 
+    byebug
+
     return render json: {
       listings: Listing.all
     }, status: 200
